@@ -9,10 +9,8 @@ jobs:
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v5
-      - name: Install Vulkan SDK
-        uses: jakoch/install-vulkan-sdk-action@v1
-        with:
-          install_lavapipe: true
+      - name: Install Vulkan
+        run: sudo apt-get install -y mesa-vulkan-drivers libvulkan1 vulkan-tools vulkan-validationlayers
       - name: Node.js setup
         uses: actions/setup-node@v5
         with:

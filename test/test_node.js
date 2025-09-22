@@ -12,7 +12,7 @@ for (const e of document.querySelectorAll("script")) {
   e.remove()
 }
 globalThis.document = document;
-globalThis.navigator.gpu = create(['adapter=foo']);
+globalThis.navigator.gpu = create(['backend=vulkan']);
 
 try {
   await runTests()

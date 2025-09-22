@@ -12,7 +12,7 @@ jobs:
       - name: Node.js setup
         uses: actions/setup-node@v5
         with:
-          node-version: 24
+          node-version: 22
       - name: install dependencies
         run: npm install
       - name: run tests

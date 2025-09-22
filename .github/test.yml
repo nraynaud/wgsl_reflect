@@ -1,0 +1,15 @@
+name: run tests
+
+on: push
+
+jobs:
+  tests:
+    name: node.js tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v5
+      - name: install dependencies
+        run: npm install
+      - name: run tests
+        run: npm run test
